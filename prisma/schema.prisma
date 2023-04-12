@@ -1,0 +1,20 @@
+generator client {
+  provider = "prisma-client-js"
+
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model DATA {
+  ID        Int      @id @default(autoincrement())
+  NAME      String   @db.VarChar(255)
+  NODE      String   @db.VarChar(255)
+  DISTANCE  Int
+  BATTERY   Float    @db.Float
+  LAT       Float
+  LNG       Float
+  TIMESTAMP DateTime @default(now()) @db.Timestamp(0)
+}
