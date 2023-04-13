@@ -20,7 +20,7 @@ const MyComponent: React.FC = () => {
 
   // Render your component using the fetched data
   return (
-    <div>print {data.ID}</div>
+    <div>print {data}</div>
   );
 };
 

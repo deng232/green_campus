@@ -12,6 +12,7 @@
     "studio": "prisma studio"
   },
   "dependencies": {
+    "@arcgis/core": "^4.26.5",
     "@prisma/client": "^4.11.0",
     "@types/node": "18.15.10",
     "@types/react": "18.0.30",
