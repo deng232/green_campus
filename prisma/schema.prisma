@@ -8,6 +8,7 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+// prisma  model
 model DATA {
   ID        Int      @id @default(autoincrement())
   NAME      String   @db.VarChar(255)
@@ -18,3 +19,7 @@ model DATA {
   LNG       Float
   TIMESTAMP DateTime @default(now()) @db.Timestamp(0)
 }
+
+//  select data with latest 'TIMESTAMP' groupby 'NODE'
+// return type DATA[]
+// typescript
